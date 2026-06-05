@@ -5,7 +5,6 @@ local LocalPlayer = Players.LocalPlayer
 local Workspace = game:GetService("Workspace")
 local TweenService = game:GetService("TweenService")
 
--- Конфиг управления фермой
 local Config = {
     AutoFarm = false,
     FarmSpeed = 130,
@@ -20,7 +19,7 @@ ScreenGui.Name = "NexusBabftFarmHub"
 ScreenGui.ResetOnSpawn = false
 
 local MainFrame = Instance.new("Frame", ScreenGui)
-MainFrame.Size = UDim2.new(0, 240, 0, 115) -- Идеально компактная высота под 3 элемента
+MainFrame.Size = UDim2.new(0, 240, 0, 115)
 MainFrame.Position = UDim2.new(0, 850, 0, 40)
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 20, 30)
 MainFrame.BorderSizePixel = 0; MainFrame.Active = true; MainFrame.Draggable = true
@@ -29,10 +28,9 @@ Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 10)
 local BlueStroke = Instance.new("UIStroke", MainFrame)
 BlueStroke.Thickness = 2; BlueStroke.Color = Color3.fromRGB(0, 120, 255)
 
--- 1. ЗАГОЛОВОК (Жестко забит на самый верх)
 local Title = Instance.new("TextLabel", MainFrame)
 Title.Size = UDim2.new(1, 0, 0, 35)
-Title.Position = UDim2.new(0, 0, 0, 0) -- Самый верх
+Title.Position = UDim2.new(0, 0, 0, 0)
 Title.BackgroundTransparency = 1
 Title.Text = "🚢 NEXUS BABFT FARMER 🥇"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -41,7 +39,7 @@ Title.TextSize = 13
 
 local Btn = Instance.new("TextButton", MainFrame)
 Btn.Size = UDim2.new(1, -20, 0, 32)
-Btn.Position = UDim2.new(0, 10, 0, 42) -- Ровно под заголовком
+Btn.Position = UDim2.new(0, 10, 0, 42)
 Btn.BackgroundColor3 = Color3.fromRGB(24, 32, 48)
 Btn.Text = "BABFT Gold Farm: OFF"
 Btn.TextColor3 = Color3.fromRGB(230, 230, 230)
@@ -60,7 +58,7 @@ end)
 
 local CreditsLabel = Instance.new("TextLabel", MainFrame)
 CreditsLabel.Size = UDim2.new(1, -20, 0, 22)
-CreditsLabel.Position = UDim2.new(0, 10, 0, 82) -- Самый низ фрейма
+CreditsLabel.Position = UDim2.new(0, 10, 0, 82)
 CreditsLabel.BackgroundColor3 = Color3.fromRGB(18, 24, 36)
 CreditsLabel.Text = "coded by SHAYLUSHAY & Nexus 2.0"
 CreditsLabel.TextColor3 = Color3.fromRGB(100, 180, 255); CreditsLabel.Font = Enum.Font.SourceSansItalic; CreditsLabel.TextSize = 10
